@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Liliia Imamutdinova ✨ Data & ML Girlie</title>
-<meta name="description" content="Portfolio of Liliia Imamutdinova: Applied Math & CS student, data analyst, ML enthusiast.">
+<meta name="description" content="Portfolio of Liliia Imamutdinova: Applied Math & CS graduate, visiting lecturer at HSE, data analyst, ML enthusiast.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 <style>
@@ -54,7 +54,8 @@
   .avatar{width:170px;height:170px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;
     font-size:4.6rem;background:conic-gradient(from 0deg,#ff2e93,#ffcf40,#b24bf3,#ff7ac6,#ff2e93);
     padding:6px;box-shadow:0 0 0 6px #fff,0 10px 30px #ff2e9355;animation:float 4s ease-in-out infinite}
-  .avatar div{width:100%;height:100%;border-radius:50%;background:var(--blush);display:grid;place-items:center}
+  .avatar div{width:100%;height:100%;border-radius:50%;background:var(--blush);display:grid;place-items:center;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   @keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}
 
   .btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 24px;border-radius:99px;
@@ -123,10 +124,13 @@
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <div class="avatar"><div>💅</div></div>
+  <div class="avatar"><div>
+    <img src="photo.jpg" alt="Liliia Imamutdinova" onerror="this.replaceWith(document.createTextNode('💅'))">
+  </div></div>
   <span class="badge">hi, it's me ✨</span>
   <h1>Liliia Imamutdinova</h1>
   <p class="tagline">Applied Mathematics &amp; Computer Science girlie who turns messy data into pretty dashboards, working models and tidy code 💕</p>
+  <p class="tagline" style="margin-top:-12px"><b>Now:</b> Visiting Lecturer at HSE University, Department of Informatics 🎓</p>
   <a class="btn primary" href="#projects">See my work 💖</a>
   <a class="btn ghost" href="mailto:lilyreber404@gmail.com">Email me 💌</a>
   <a class="btn ghost" href="https://github.com/lilyreber" target="_blank" rel="noopener">GitHub 🎀</a>
@@ -137,7 +141,7 @@
 <section id="about" class="about">
   <h2>About me</h2>
   <div class="card">
-    <p>I study Applied Mathematics and Computer Science at HSE University in Saint Petersburg (GPA 8.6, A-equivalent) and love the place where math meets code: machine learning, numerical methods, data analysis and clean software. I've interned at Yandex Maps, published a Python package, built apps in C++ and Java, and I also teach math and coordinate summer schools. Glitter optional, rigor mandatory ✨</p>
+    <p>I hold a BS in Applied Mathematics and Computer Science from HSE University in Saint Petersburg (GPA 8.6, A-equivalent) and love the place where math meets code: machine learning, numerical methods, data analysis and clean software. I now teach Discrete Mathematics at HSE as a visiting lecturer, interned at Yandex Cloud and Yandex Maps, published a Python package, built apps in C++ and Java, and I also coordinate summer schools. Glitter optional, rigor mandatory ✨</p>
   </div>
   <div class="stats" style="margin-top:28px">
     <div class="stat"><b>8.6</b>GPA at HSE</div>
@@ -179,6 +183,26 @@
 
 <section id="experience">
   <h2>Experience</h2>
+  <div class="card" style="margin-bottom:26px">
+    <span class="tag">2026 – now 💼</span>
+    <h3>Visiting Lecturer · HSE University</h3>
+    <div class="meta">Saint Petersburg · School of Computer Science, Physics and Technology · Department of Informatics</div>
+    <ul>
+      <li>Teaching Discrete Mathematics to first-year students (2026/2027 academic year): Software Engineering (09.03.04) and Applied Mathematics and Informatics (01.03.02).</li>
+      <li>Completed HSE professional development in 2026: "Content Generation with Artificial Intelligence" and "Analysis, Assessment of Materials and Feedback with Artificial Intelligence".</li>
+      <li><a href="https://www.hse.ru/org/persons/510319529/" target="_blank" rel="noopener" style="color:var(--hot);font-weight:600">Official HSE profile ↗</a></li>
+    </ul>
+  </div>
+  <div class="card" style="margin-bottom:26px">
+    <span class="tag">Jul – Oct 2025</span>
+    <h3>Analyst Intern · Yandex Cloud</h3>
+    <div class="meta">Cloud platform by Yandex ☁️</div>
+    <ul>
+      <li>Wrote SQL queries to pull and prepare data for analysis.</li>
+      <li>Built dashboards to track key metrics for the team.</li>
+      <li>Trained and evaluated machine learning models for customer lifetime value (LTV) prediction.</li>
+    </ul>
+  </div>
   <div class="card">
     <span class="tag">Apr – Aug 2024</span>
     <h3>Data Analyst Intern · Yandex Maps</h3>
