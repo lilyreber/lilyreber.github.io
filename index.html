@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liliia Imamutdinova ✨ Data & ML Girlie</title>
+<meta name="description" content="Portfolio of Liliia Imamutdinova: Applied Math & CS student, data analyst, ML enthusiast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --hot:#ff2e93; --pink:#ff7ac6; --baby:#ffd1ec; --blush:#fff0f8;
+    --purple:#b24bf3; --ink:#4a0d33; --gold:#ffcf40;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Fredoka',system-ui,sans-serif;color:var(--ink);
+    background:
+      radial-gradient(circle at 12% 8%, #fff 0 2px, transparent 3px) 0 0/60px 60px,
+      radial-gradient(circle at 70% 60%, #ffffffaa 0 2px, transparent 3px) 0 0/90px 90px,
+      linear-gradient(160deg,#ffb3de 0%,#ffd9f0 40%,#ffc2e8 100%);
+    background-attachment:fixed;
+    line-height:1.55;overflow-x:hidden;
+  }
+  .script{font-family:'Pacifico',cursive;font-weight:400}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  /* marquee */
+  .marquee{background:var(--hot);color:#fff;font-weight:600;overflow:hidden;white-space:nowrap;
+    border-bottom:4px solid #fff;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem}
+  .marquee span{display:inline-block;padding:8px 0;animation:slide 28s linear infinite}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:#fff8fcee;backdrop-filter:blur(8px);
+    border-bottom:3px dotted var(--pink)}
+  nav .wrap{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:10px 20px}
+  nav a{color:var(--hot);text-decoration:none;font-weight:600;padding:6px 14px;border-radius:99px;
+    transition:.2s}
+  nav a:hover{background:var(--hot);color:#fff;transform:rotate(-3deg) scale(1.08)}
+
+  /* hero */
+  header.hero{text-align:center;padding:64px 0 48px;position:relative}
+  .badge{display:inline-block;background:#fff;color:var(--hot);border:3px solid var(--hot);
+    border-radius:99px;padding:4px 16px;font-weight:600;transform:rotate(-4deg);
+    box-shadow:4px 4px 0 var(--hot);margin-bottom:18px}
+  h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(2.6rem,9vw,5.6rem);line-height:1.05;
+    background:linear-gradient(90deg,var(--hot),var(--purple),var(--hot));background-size:200% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shine 4s linear infinite;filter:drop-shadow(3px 3px 0 #fff)}
+  @keyframes shine{to{background-position:200% center}}
+  .tagline{font-size:1.25rem;margin:14px auto 26px;max-width:620px;font-weight:500}
+  .avatar{width:170px;height:170px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;
+    font-size:4.6rem;background:conic-gradient(from 0deg,#ff2e93,#ffcf40,#b24bf3,#ff7ac6,#ff2e93);
+    padding:6px;box-shadow:0 0 0 6px #fff,0 10px 30px #ff2e9355;animation:float 4s ease-in-out infinite}
+  .avatar div{width:100%;height:100%;border-radius:50%;background:var(--blush);display:grid;place-items:center}
+  @keyframes float{50%{transform:translateY(-10px) rotate(3deg)}}
+
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 24px;border-radius:99px;
+    border:3px solid var(--hot);margin:5px;transition:.2s;font-size:1rem}
+  .btn.primary{background:var(--hot);color:#fff;box-shadow:5px 5px 0 var(--ink)}
+  .btn.ghost{background:#fff;color:var(--hot);box-shadow:5px 5px 0 var(--pink)}
+  .btn:hover{transform:translate(-2px,-2px) rotate(-2deg);box-shadow:8px 8px 0 var(--ink)}
+
+  /* sections */
+  section{padding:38px 0}
+  h2{font-family:'Pacifico',cursive;font-weight:400;font-size:2.3rem;color:var(--hot);
+    text-shadow:3px 3px 0 #fff;margin-bottom:22px;text-align:center}
+  h2::before{content:"💖 "} h2::after{content:" 💖"}
+
+  .card{background:#fff;border:3px solid var(--hot);border-radius:26px;padding:24px 26px;
+    box-shadow:8px 8px 0 var(--pink);position:relative;transition:.25s}
+  .card:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--pink)}
+  .grid{display:grid;gap:24px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+  .card h3{font-size:1.3rem;color:var(--hot);margin-bottom:2px}
+  .meta{font-size:.92rem;color:var(--purple);font-weight:600;margin-bottom:10px}
+  .card ul{margin-left:20px}
+  .card li{margin:5px 0}
+  .card li::marker{content:"💗 "}
+
+  .about p{font-size:1.1rem;text-align:center;max-width:720px;margin:0 auto}
+  .about .card{transform:rotate(-1deg)}
+
+  /* skills */
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0 18px}
+  .chip{background:linear-gradient(135deg,#ff7ac6,#ff2e93);color:#fff;font-weight:600;
+    padding:6px 15px;border-radius:99px;border:2px solid #fff;box-shadow:0 3px 0 #c20a64;
+    transition:.2s;cursor:default}
+  .chip:hover{transform:translateY(-3px) rotate(-4deg) scale(1.1)}
+  .chip.alt{background:linear-gradient(135deg,#d58cff,var(--purple));box-shadow:0 3px 0 #7a1fbd}
+  .label{font-weight:700;color:var(--ink);margin-top:6px}
+
+  /* timeline tag */
+  .tag{position:absolute;top:-14px;right:18px;background:var(--gold);color:var(--ink);font-weight:700;
+    padding:3px 14px;border-radius:99px;border:2px solid var(--ink);transform:rotate(4deg);font-size:.85rem}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:6px}
+  .stat{background:var(--blush);border:3px dashed var(--hot);border-radius:20px;text-align:center;padding:16px 8px}
+  .stat b{display:block;font-family:'Pacifico',cursive;font-size:2.1rem;color:var(--hot);font-weight:400}
+
+  footer{text-align:center;padding:44px 20px 60px;background:var(--hot);color:#fff;margin-top:40px;
+    border-top:5px solid #fff}
+  footer .script{font-size:2rem;margin-bottom:8px}
+  footer a{color:#fff;font-weight:700}
+
+  .sparkle{position:fixed;pointer-events:none;z-index:99;font-size:18px;animation:pop .9s ease-out forwards}
+  @keyframes pop{to{transform:translateY(-34px) scale(.2) rotate(120deg);opacity:0}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="marquee"><span>
+  ✨ Applied Math &amp; CS ✨ Data Analyst ✨ Machine Learning ✨ Python girlie ✨ SQL queen ✨ Open for opportunities ✨
+  Applied Math &amp; CS ✨ Data Analyst ✨ Machine Learning ✨ Python girlie ✨ SQL queen ✨ Open for opportunities ✨
+</span></div>
+
+<nav><div class="wrap">
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+  <a href="#projects">Projects</a><a href="#publication">Publication</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="avatar"><div>💅</div></div>
+  <span class="badge">hi, it's me ✨</span>
+  <h1>Liliia Imamutdinova</h1>
+  <p class="tagline">Applied Mathematics &amp; Computer Science girlie who turns messy data into pretty dashboards, working models and tidy code 💕</p>
+  <a class="btn primary" href="#projects">See my work 💖</a>
+  <a class="btn ghost" href="mailto:lilyreber404@gmail.com">Email me 💌</a>
+  <a class="btn ghost" href="https://github.com/lilyreber" target="_blank" rel="noopener">GitHub 🎀</a>
+</div></header>
+
+<main class="wrap">
+
+<section id="about" class="about">
+  <h2>About me</h2>
+  <div class="card">
+    <p>I study Applied Mathematics and Computer Science at HSE University in Saint Petersburg (GPA 8.6, A-equivalent) and love the place where math meets code: machine learning, numerical methods, data analysis and clean software. I've interned at Yandex Maps, published a Python package, built apps in C++ and Java, and I also teach math and coordinate summer schools. Glitter optional, rigor mandatory ✨</p>
+  </div>
+  <div class="stats" style="margin-top:28px">
+    <div class="stat"><b>8.6</b>GPA at HSE</div>
+    <div class="stat"><b>2026</b>BS graduation</div>
+    <div class="stat"><b>1</b>published package</div>
+    <div class="stat"><b>6+</b>languages coded</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <div class="label">Programming languages</div>
+    <div class="chips">
+      <span class="chip">Python 3</span><span class="chip">C++</span><span class="chip">SQL</span>
+      <span class="chip">Bash</span><span class="chip">Java</span><span class="chip">Haskell</span>
+    </div>
+    <div class="label">Machine learning &amp; data</div>
+    <div class="chips">
+      <span class="chip alt">Scikit-learn</span><span class="chip alt">PyTorch</span><span class="chip alt">TensorFlow</span>
+      <span class="chip alt">Pandas</span><span class="chip alt">NumPy</span><span class="chip alt">OpenCV</span><span class="chip alt">Matplotlib</span>
+    </div>
+    <div class="label">Dev tools</div>
+    <div class="chips">
+      <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Qt Creator</span><span class="chip">Spring Framework</span>
+    </div>
+    <div class="label">Languages</div>
+    <div class="chips">
+      <span class="chip alt">Russian · native 🇷🇺</span><span class="chip alt">English · B2 🇬🇧</span>
+    </div>
+    <div class="label">Favorite courses</div>
+    <div class="chips">
+      <span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Numerical Methods</span>
+      <span class="chip">Optimization</span><span class="chip">Probability &amp; Statistics</span><span class="chip">Databases</span>
+      <span class="chip">Algorithms</span><span class="chip">Linear Algebra</span><span class="chip">Operating Systems</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <span class="tag">Apr – Aug 2024</span>
+    <h3>Data Analyst Intern · Yandex Maps</h3>
+    <div class="meta">Moscow · one of Russia's top IT companies</div>
+    <ul>
+      <li>Built SQL ETL pipelines to process large-scale user activity data and create datasets for analysis.</li>
+      <li>Talked to customers and coordinated technical requirements.</li>
+      <li>Automated reporting and built dashboards showing marketing spend and performance for stakeholders.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag">Mar – Jun 2025</span>
+      <h3>MosMetro 🚇</h3>
+      <div class="meta">Python · NumPy · Pandas · Matplotlib</div>
+      <p>Analysis of passenger flow in the Moscow metro.</p>
+      <ul>
+        <li>EDA of user patterns, station traffic and peak-hour dynamics.</li>
+        <li>Modeled passenger flow from turnstile data and reconstructed the correspondence matrix.</li>
+        <li>Interactive dashboard for monitoring traffic.</li>
+        <li>ETL pipelines collecting data from multiple sources.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Mar – Jun 2022</span>
+      <h3>ChitChat 🎮</h3>
+      <div class="meta">C++17 · Qt</div>
+      <p>An app where people join virtual rooms, voice-chat with friends and play games like Arkanoid and Hangman.</p>
+      <ul>
+        <li>Implemented the full client-side game model.</li>
+        <li>Built UI for sign-up and login, the playing field, object drawing and character selection.</li>
+        <li>Server side: field generation, object collisions and updates.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Mar – Jun 2023</span>
+      <h3>Units 📝</h3>
+      <div class="meta">Java · Spring</div>
+      <p>An app for tests and quizzes: Java server plus web client.</p>
+      <ul>
+        <li>Created the controllers.</li>
+        <li>Implemented sending personal emails.</li>
+        <li>Built the whole UI.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Oct 2022</span>
+      <h3>FSM Specification Language 🤖</h3>
+      <div class="meta">Python 3 · ply</div>
+      <p>Formal Languages mini-project: a language for describing finite state machines.</p>
+      <ul>
+        <li>Designed the concrete syntax.</li>
+        <li>Implemented the lexer and parser with ply.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="publication">
+  <h2>Publication</h2>
+  <div class="card">
+    <span class="tag">2025</span>
+    <h3>CFinversion: numerical inversion of characteristic functions 📐</h3>
+    <div class="meta">Python · NumPy · "MAT-MEKH. NAUKA 2025" proceedings, St. Petersburg (in Russian)</div>
+    <ul>
+      <li>Developed a Python package implementing numerical methods (Bohman and others) that invert characteristic functions to approximate probability densities.</li>
+      <li>Validated against known distributions (Normal, Log-Normal, Exponential, Pareto, Cauchy) with high accuracy.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="grid g2">
+    <div class="card"><h3>🏆 Spectral:Technologies scholarship</h3><p>For high academic performance.</p></div>
+    <div class="card"><h3>🎨 Summer School Science Art</h3><p>Coordinator and programming consultant.</p></div>
+    <div class="card"><h3>🧠 Summer School ML&amp;Text</h3><p>Participant.</p></div>
+    <div class="card"><h3>➕ Unichance educational center</h3><p>Math teacher.</p></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <span class="tag">2021 – 2026</span>
+    <h3>HSE University, Saint Petersburg 🎓</h3>
+    <div class="meta">BS in Applied Mathematics and Computer Science · GPA 8.6 (A-equivalent)</div>
+    <p>National Research University Higher School of Economics.</p>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="script">Let's work together, bestie ✨</div>
+  <p>💌 <a href="mailto:lilyreber404@gmail.com">lilyreber404@gmail.com</a> &nbsp;·&nbsp;
+     🎀 <a href="https://github.com/lilyreber" target="_blank" rel="noopener">github.com/lilyreber</a></p>
+  <p style="margin-top:14px;opacity:.85">Made with 💖, glitter and a lot of Python · © 2026 Liliia Imamutdinova</p>
+</footer>
+
+<script>
+  // sparkle trail
+  (function(){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var icons=['✨','💖','⭐','🎀','💗'], last=0;
+    addEventListener('pointermove',function(e){
+      var n=Date.now(); if(n-last<70) return; last=n;
+      var s=document.createElement('span'); s.className='sparkle';
+      s.textContent=icons[Math.floor(Math.random()*icons.length)];
+      s.style.left=e.clientX+'px'; s.style.top=e.clientY+'px';
+      document.body.appendChild(s); setTimeout(function(){s.remove()},900);
+    });
+  })();
+</script>
+</body>
+</html>
